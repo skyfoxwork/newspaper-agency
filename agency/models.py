@@ -19,7 +19,10 @@ class Newspaper(models.Model):
         on_delete=models.CASCADE,
         related_name="topics"
     )
-    publishers = models.ManyToManyField(settings.AUTH_USER_MODEL)
+    publishers = models.ManyToManyField(
+        settings.AUTH_USER_MODEL,
+        related_name="publishers"
+    )
 
     def __str__(self):
         return self.title
