@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <p>
+    Redactor list
+    <a href="{% url 'accounts:redactor-create' %}">Create redactor</a>
+  </p>
+  <ul>
+    {% for redactor in redactor_list %}
+      <li>
+        {{ redactor.first_name }} {{ redactor.last_name }} ({{ redactor.username }})
+      </li>
+      <a href="{% url 'agency:redactor-detail' pk=redactor.id %}">about</a>
+    {% endfor %}
+  </ul>
+{% endblock %}

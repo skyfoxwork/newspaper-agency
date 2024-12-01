@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <p>Redactor detail</p>
+  <ul>
+    <li>
+      {{ redactor.first_name }} {{ redactor.last_name }} ({{ redactor.username }})
+      <a href="{% url 'accounts:redactor-update' pk=redactor.id %}">update</a>
+      <a href="{% url 'accounts:redactor-delete' pk=redactor.id %}">delete</a>
+    </li>
+     newspapers:
+     {% if redactor.publishers.all %}
+       {% for newspaper in redactor.publishers.all %}
+         {{ newspaper }}
+       {% endfor %}
+     {% else %}
+       <p>no newspapers yet</p>
+     {% endif %}
+  </ul>
+
+  <a href="{% url 'agency:redactor-list' %}">redactor list</a>
+{% endblock %}

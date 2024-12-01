@@ -1,10 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+  <p>
+    Our Newspapers
+    <a href="{% url 'agency:newspaper-create' %}">create newspaper</a>
+  </p>
+  <ul>
+    {% for newspaper in newspapers %}
+      <li>
+        title: {{ newspaper.title }}
+        <a href="{% url 'agency:newspaper-update' pk=newspaper.id %}">update</a>
+        <a href="{% url 'agency:newspaper-delete' pk=newspaper.id %}">delete</a>
+      </li>
+      <p>date: {{ newspaper.published_date }}</p>
+      <p>topic: {{ newspaper.topic.name }}</p>
+      <p>context: {{ newspaper.context }}</p>
+      <p>
+        publishers:
+        {% for publisher in newspaper.publishers.all %}
+            {{ publisher }},
+        {% endfor %}
+      </p>
+    {% endfor %}
+  </ul>
+{% endblock %}
