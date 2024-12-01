@@ -3,7 +3,7 @@ from django.db import models
 
 
 class Redactor(AbstractUser):
-    years_of_experience = models.IntegerField()
+    years_of_experience = models.IntegerField(null=True)
 
     def __str__(self):
         return self.username
