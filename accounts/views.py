@@ -13,7 +13,7 @@ class RedactorCrateView(generic.CreateView):
 
 class RedactorUpdateView(generic.UpdateView):
     model = Redactor
-    fields = "__all__"
+    form_class = RedactorCreationForm
     success_url = reverse_lazy("agency:redactor-list")
 
 
