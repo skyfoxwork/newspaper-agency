@@ -1,23 +1,28 @@
 {% extends "base.html" %}
+{% load django_bootstrap5 %}
 
 {% block content %}
+<br>
+<br>
+<br>
+
+<div class="d-flex align-items-center p-3 my-3 text-white bg-secondary rounded shadow-sm">
+    <div class="lh-1">
+      <h1 class="h3 mb-0 text-white lh-1">
+        Login
+      </h1>
+    </div>
+</div>
 
 {% if form.errors %}
   <p>Your username and password didn't match. Please try again.</p>
 {% endif %}
 
-<h1>Login</h1>
-
-{#{% if next %}#}
-{#  <p>Please login to see this page.</p>#}
-{#{% endif %}#}
-
 <form method="post" action="{% url 'accounts:login' %}">
   {% csrf_token %}
-  {{ form.as_p }}
+  {% bootstrap_form form %}
 
   <input type="submit" value="Login" class="btn btn-primary" />
-{#  <input type="hidden" name="next" value="{{ next }}" />#}
 </form>
 
 {% endblock %}

@@ -1,22 +1,58 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <p>Redactor detail</p>
-  <ul>
-    <li>
-      {{ redactor.first_name }} {{ redactor.last_name }} ({{ redactor.username }})
-      <a href="{% url 'accounts:redactor-update' pk=redactor.id %}">update</a>
-      <a href="{% url 'accounts:redactor-delete' pk=redactor.id %}">delete</a>
-    </li>
-     newspapers:
-     {% if redactor.publishers.all %}
-       {% for newspaper in redactor.publishers.all %}
-         {{ newspaper }}
-       {% endfor %}
-     {% else %}
-       <p>no newspapers yet</p>
-     {% endif %}
-  </ul>
+  <br>
+  <br>
+  <br>
 
-  <a href="{% url 'agency:redactor-list' %}">redactor list</a>
+  <div class="d-flex align-items-center p-3 my-3 text-white bg-secondary rounded shadow-sm">
+    <div class="lh-1">
+      <h1 class="h3 mb-0 text-white lh-1">
+        Redactor detail
+      </h1>
+    </div>
+      <div class="ms-auto">
+        <a class=" text-white p-2 text-decoration-none" href="{% url 'accounts:redactor-update' pk=redactor.id %}">update</a>
+        <a class=" text-white p-2 text-decoration-none" href="{% url 'accounts:redactor-delete' pk=redactor.id %}">delete</a>
+    </div>
+  </div>
+
+<table class="table">
+  <thead>
+  </thead>
+  <tbody>
+    <tr>
+      <td>user name:</td>
+      <td>{{ redactor.username }}</td>
+    </tr>
+    <tr>
+      <td>first name:</td>
+      <td>{{ redactor.first_name }}</td>
+    </tr>
+    <tr>
+      <td>last name:</td>
+      <td>Thornton</td>
+    </tr>
+    <tr>
+      <td>email:</td>
+      <td>{{ redactor.email }}</td>
+    </tr>
+    <tr>
+      <td>years of experience:</td>
+      <td>{{ redactor.years_of_experience }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Newspapers:</strong></p>
+  {% if redactor.publishers.all %}
+    {% for newspaper in redactor.publishers.all %}
+         <p>"{{ newspaper }}"</p>
+    {% endfor %}
+  {% else %}
+       <p>no newspapers yet</p>
+  {% endif %}
+
+  <a href="{% url 'agency:redactor-list' %}">return redactor list</a>
+  <br>
 {% endblock %}
