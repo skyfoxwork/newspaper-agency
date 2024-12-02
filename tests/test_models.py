@@ -2,7 +2,6 @@ from django.contrib.auth import get_user_model
 from django.test import TestCase
 
 from agency.models import Newspaper, Topic
-from accounts.models import Redactor
 
 class ModelTests(TestCase):
     def test_topic_str(self):
