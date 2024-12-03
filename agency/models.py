@@ -4,7 +4,11 @@ from core import settings
 
 
 class Topic(models.Model):
-    name = models.CharField(max_length=255)
+    name = models.CharField(
+        max_length=255,
+        null=True,
+        blank=True
+    )
 
     def __str__(self):
         return self.name
@@ -12,12 +16,12 @@ class Topic(models.Model):
 
 class Newspaper(models.Model):
     title = models.CharField(max_length=255)
-    context = models.TextField()
+    context = models.TextField(null=True, blank=True)
     published_date = models.DateField(null=True, blank=True)
     topic = models.ForeignKey(
         Topic,
         on_delete=models.CASCADE,
-        related_name="topics"
+        related_name="topics",
     )
     publishers = models.ManyToManyField(
         settings.AUTH_USER_MODEL,
