@@ -30,39 +30,6 @@
             {% endif %}
           </li>
         </ul>
-
-{#        <form class="d-flex">#}
-{#          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">#}
-{#          <button class="btn btn-outline-success" type="submit">Search</button>#}
-{#        </form>#}
-
       </div>
     </div>
-
   </nav>
-
-<!----first------>
-{#<br>#}
-{##}
-{#<ul class="sidebar-nav list-group">#}
-{#  {% if user.is_authenticated %}#}
-{#    <li class="list-group-item">#}
-{#      User: <a href="{{ user.get_absolute_url }}">{{ user.get_username }}</a>#}
-{#    </li>#}
-{#    <li class="list-group-item"><a href="{% url 'accounts:logout' %}">Logout</a></li>#}
-{#    <li class="list-group-item">#}
-{#      <form method="post" action="{% url 'accounts:logout' %}">#}
-{#        {% csrf_token %}#}
-{#        <button type="submit" class="btn btn-link">logout</button>#}
-{#      </form>#}
-{#    </li>#}
-{#  {% else %}#}
-{#    <li class="list-group-item"><a href="{% url 'accounts:login' %}">Login</a></li>#}
-{#  {% endif %}#}
-{##}
-{#  <br>#}
-{##}
-{#  <li class="list-group-item"><a href="{% url 'agency:index' %}">Home</a></li>#}
-{#  <li class="list-group-item"><a href="{% url 'agency:redactor-list' %}">Redactors</a></li>#}
-{#</ul>#}
-<!---------->

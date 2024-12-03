@@ -16,7 +16,6 @@
   <form action="" method="post">
     {% csrf_token %}
 
-{#    <input type="submit" value="Yes" class="btn btn-danger">#}
     <div class="text-center">
       <input type="submit" value="Yes" class="btn btn-danger">
     </div>
@@ -27,7 +26,5 @@
   <div class="text-center">
     <a class="btn btn-success" role="button" href="{% url 'agency:index' %}">Cansel</a>
   </div>
-
   <br>
-
 {% endblock %}

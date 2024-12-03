@@ -3,6 +3,7 @@ from django.test import TestCase
 
 from agency.models import Newspaper, Topic
 
+
 class ModelTests(TestCase):
     def test_topic_str(self):
         topic = Topic.objects.create(

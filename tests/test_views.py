@@ -48,5 +48,9 @@ class PrivateLoginRequireTest(TestCase):
 
         redactor = Redactor.objects.all()
 
-        self.assertEqual(list(response.context["redactor_list"]), list(redactor))
-        self.assertTemplateUsed(response, "agency/redactor_list.html")
+        self.assertEqual(
+            list(response.context["redactor_list"]), list(redactor)
+        )
+        self.assertTemplateUsed(
+            response, "agency/redactor_list.html"
+        )
