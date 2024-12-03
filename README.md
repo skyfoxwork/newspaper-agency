@@ -1,6 +1,6 @@
 # "Newspaper agency"
 
-Project for managing the redactors responsible for each newspaper issue.
+Python Django project for managing the redactors responsible for each newspaper issue.
 
 In this app you cat add, update, delete newspapers
 and add, update, delete redactors for these newspapers.
@@ -14,59 +14,98 @@ and add, update, delete redactors for these newspapers.
 
 ## Installation
 
-Install Python3: https://www.python.org/
+1. Install Python3:
 
-Install Git: https://git-scm.com/
+```shell
+www.python.org/
+```
 
-Clone the repository:
+2. Install Git:
 
-   git clone https://github.com/skyfoxwork/newspaper-agency.git
+```shell
+git-scm.com/
+```
 
-   git clone -b develop https://github.com/skyfoxwork/newspaper-agency.git
+3. Clone the repository.
 
-1. Navigate to the project directory:
+main branch:
+```shell
+git clone https://github.com/skyfoxwork/newspaper-agency.git
+```
 
-   cd newspaper-agency
+develop branch
 
-2. Create virtual environment:
+```shell
+git clone -b develop https://github.com/skyfoxwork/newspaper-agency.git
+```
 
-   python3 -m venv venv
+4. Navigate to the project directory:
 
-3. Activate virtual environment (venv):
+```shell
+cd newspaper-agency
+```
+
+5. Create virtual environment:
+
+```shell
+python3 -m venv venv
+```
+
+6. Activate virtual environment (venv).
+
    MacOS, Linux:
 
-   source venv/bin/activate
+```shell
+source venv/bin/activate
+```
 
-   (if you need for deactivating virtual environment use):
-       deactivate
 
-4. Install dependencies:
+if you need to deactivate virtual environment use:
 
-   pip install -r requirements.txt
+```shell
+deactivate
+```
 
-5. Create database:
+7. Install dependencies:
 
-   python3 manage.py makemigrations
+```shell
+pip install -r requirements.txt
+```
 
-   python3 manage.py migrate
+8. Create database:
 
-6. Optional, fill database with data:
+```shell
+python3 manage.py makemigrations
+python3 manage.py migrate
+```
 
-   python3 manage.py loaddata newspaper_agency_fixture.json
+9. Fill database with data:
 
-7. Run project:
+```shell
+python3 manage.py loaddata newspaper_agency_fixture.json
+```
+10. Run project:
 
-   python3 manage.py runserver
+```shell
+python3 manage.py runserver
+```
 
-8. Visit your web browser:
+11. Visit your web browser:
 
-   http://127.0.0.1:8000/ or localhost:8000
+```shell
+http://127.0.0.1:8000/ or localhost:8000
+```
+to log in:
 
-   use to log in:
-   
-   username: user.public
-   password: Pdmp123Ps3
+```shell
+username: user.public
+password: Pdmp123Ps3
+```
 
-   or you can create your superuser with:
+or you can create your superuser with:
 
-   python3 manage.py createsuperuser
+```shell
+python3 manage.py createsuperuser
+```
+
+and login as your custom superuser.
