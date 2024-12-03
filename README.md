@@ -22,6 +22,8 @@ Clone the repository:
 
    git clone https://github.com/skyfoxwork/newspaper-agency.git
 
+   git clone -b develop https://github.com/skyfoxwork/newspaper-agency.git
+
 1. Navigate to the project directory:
 
    cd newspaper-agency
@@ -40,30 +42,31 @@ Clone the repository:
 
 4. Install dependencies:
 
-   pip -r install requirements.txt
+   pip install -r requirements.txt
 
 5. Create database:
 
    python3 manage.py makemigrations
+
    python3 manage.py migrate
 
-6. Create superuser:
+6. Optional, fill database with data:
 
-   python3 manage.py createsuperuser
+   python3 manage.py loaddata newspaper_agency_fixture.json
 
-   Don't forget superuser username and password.
-   You will use it for login site.
-
-7. Optional, fill database with data:
-
-   python3 manage.py loaddata newspaper_agency_fixture_file.json
-
-8. Run project:
+7. Run project:
 
    python3 manage.py runserver
 
-9. Visit your web browser:
+8. Visit your web browser:
 
    http://127.0.0.1:8000/ or localhost:8000
 
-   user your superuser name and password to login.
+   use to log in:
+   
+   username: user.public
+   password: Pdmp123Ps3
+
+   or you can create your superuser with:
+
+   python3 manage.py createsuperuser
