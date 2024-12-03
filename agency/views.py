@@ -1,4 +1,3 @@
-from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render
 from django.urls import reverse_lazy
@@ -8,31 +7,30 @@ from accounts.models import Redactor
 from agency.models import Newspaper
 
 
-@login_required
 def index(request):
-    newspapers = Newspaper.objects.all()
-    context = {
-        "newspapers": newspapers
-    }
+    return render(request, "agency/index.html")
 
-    return render(request, "agency/index.html", context=context)
+
+class NewspapersListView(LoginRequiredMixin, generic.ListView):
+    model = Newspaper
+    context_object_name = "newspapers"
 
 
 class NewspapersCreateView(LoginRequiredMixin, generic.CreateView):
     model = Newspaper
     fields = "__all__"
-    success_url = reverse_lazy("agency:index")
+    success_url = reverse_lazy("agency:newspaper-list")
 
 
 class NewspapersUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Newspaper
     fields = "__all__"
-    success_url = reverse_lazy(LoginRequiredMixin, "agency:index")
+    success_url = reverse_lazy(LoginRequiredMixin, "agency:newspaper-list")
 
 
 class NewspapersDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Newspaper
-    success_url = reverse_lazy("agency:index")
+    success_url = reverse_lazy("agency:newspaper-list")
 
 
 class RedactorListView(LoginRequiredMixin, generic.ListView):
