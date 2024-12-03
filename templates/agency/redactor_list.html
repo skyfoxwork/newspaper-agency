@@ -20,7 +20,7 @@
       <th scope="col">User name</th>
       <th scope="col">First name</th>
       <th scope="col">Last name</th>
-      <th scope="col">Amail</th>
+      <th scope="col">Email</th>
       <th scope="col">Years of experience</th>
       <th scope="col">About</th>
     </tr>
@@ -40,7 +40,7 @@
         <td> - </td>
       {% endif %}
       <td>
-        <a href="{% url 'agency:redactor-detail' pk=redactor.id %}">ABOUT</a>
+        <a class="text-decoration-none" href="{% url 'agency:redactor-detail' pk=redactor.id %}">ABOUT</a>
       </td>
     </tr>
     {% endfor %}
