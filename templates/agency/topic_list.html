@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <br>
+  <br>
+  <br>
+
+  <div class="d-flex align-items-center p-3 my-3 text-white bg-secondary rounded shadow-sm">
+    <div class="lh-1">
+      <h1 class="h6 mb-0 text-white lh-1">Topics</h1>
+
+    </div>
+    <a class="ms-auto text-white text-decoration-none" href="{% url 'agency:topic-create' %}">Create</a>
+  </div>
+
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Topic</th>
+      <th scope="col">Update</th>
+      <th scope="col">Delete</th>
+  </thead>
+  <tbody>
+  {% if topic_list %}
+    {% for topic in topic_list %}
+    <tr>
+      <th scope="row">{{ forloop.counter }}</th>
+      <td>{{ topic.name }}</td>
+      <td>
+        <a class="text-decoration-none" href="{% url 'agency:topic-update' pk=topic.id %}">UPDATE</a>
+      </td>
+      <td>
+        <a class="text-decoration-none" href="{% url 'agency:topic-delete' pk=topic.id %}">DELETE</a>
+      </td>
+    </tr>
+    {% endfor %}
+  {% else %}
+    <p>No topic yes.</p>
+  {% endif %}
+  </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+  <br>
+  <br>
+  <br>
+
+  <div class="d-flex align-items-center p-3 my-3 text-white bg-secondary rounded shadow-sm">
+    <div class="lh-1">
+      <h1 class="h3 mb-0 text-white lh-1">
+        {{ object|yesno:"Update,Create" }} "{{ topic.name }}" topic
+      </h1>
+    </div>
+  </div>
+  <form action="" method="post" novalidate>
+    {% csrf_token %}
+    {% bootstrap_form form %}
+
+    <input type="submit" value="Submit" class="btn btn-primary">
+  </form>
+  <br>
+  <br>
+  <br>
+
+{% endblock %}
