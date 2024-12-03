@@ -1,6 +1,4 @@
-# Project name
-
-"Newspaper agency"
+# "Newspaper agency"
 
 Project for managing the redactors responsible for each newspaper issue.
 
