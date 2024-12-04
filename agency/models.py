@@ -1,6 +1,6 @@
 from django.db import models
 
-from core import settings
+from django.conf import settings
 
 
 class Topic(models.Model):
