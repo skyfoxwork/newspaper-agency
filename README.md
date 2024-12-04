@@ -5,6 +5,18 @@ Python Django project for managing the redactors responsible for each newspaper 
 In this app you cat add, update, delete newspapers
 and add, update, delete redactors for these newspapers.
 
+https://newspaper-agency-v2x8.onrender.com/ - LIVE
+
+username:
+
+```shell
+user.public
+```
+password:
+```shell
+Pdmp123Ps3
+```
+
 ## Technologies
 
 - Python 3
