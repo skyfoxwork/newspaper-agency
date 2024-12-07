@@ -7,8 +7,8 @@ from accounts.models import Redactor
 from agency.models import Newspaper, Topic
 
 
-def index(request):
-    return render(request, "agency/index.html")
+class IndexView(generic.TemplateView):
+    template_name = "agency/index.html"
 
 
 class TopicListView(LoginRequiredMixin, generic.ListView):
