@@ -9,19 +9,20 @@ from accounts.views import (
 urlpatterns = [
     path("", include("django.contrib.auth.urls")),
     path(
-        "redactor-create/",
+        "redactors-create/",
         RedactorCrateView.as_view(),
         name="redactor-create"
     ),
     path(
-        "redactor-update/<int:pk>/",
+        "redactors/<int:pk>/update/",
         RedactorUpdateView.as_view(),
         name="redactor-update"
     ),
     path(
-        "redactor-delete/<int:pk>/",
+        "redactors/<int:pk>/delete/",
         RedactorDeleteView.as_view(),
-        name="redactor-delete"),
+        name="redactor-delete"
+    ),
 ]
 
 app_name = "accounts"

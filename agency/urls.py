@@ -17,51 +17,51 @@ from agency.views import (
 urlpatterns = [
     path("", IndexView.as_view(), name="index"),
     path(
-        "redactor-list/",
+        "redactors/",
         RedactorListView.as_view(),
         name="redactor-list"
     ),
     path(
-        "redactor-detail/<int:pk>/",
+        "redactors/<int:pk>/detail/",
         RedactorDetailView.as_view(),
         name="redactor-detail"
     ),
     path(
-        "topic-list/",
+        "topics/",
         TopicListView.as_view(),
         name="topic-list"),
     path(
-        "topic-crate/",
+        "topics-create/",
         TopicCreateView.as_view(),
         name="topic-create"
     ),
     path(
-        "topic-update/<int:pk>/",
+        "topics/<int:pk>/update/",
         TopicUpdateView.as_view(),
         name="topic-update"
     ),
     path(
-        "topic-delete/<int:pk>/",
+        "topics/<int:pk>/delete/",
         TopicDeleteView.as_view(),
         name="topic-delete"
     ),
     path(
-        "newspaper-list/",
+        "newspapers/",
         NewspapersListView.as_view(),
         name="newspaper-list"
     ),
     path(
-        "newspaper-create/",
+        "newspapers-create/",
         NewspapersCreateView.as_view(),
         name="newspaper-create"
     ),
     path(
-        "newspaper-update/<int:pk>/",
+        "newspapers/<int:pk>/update/",
         NewspapersUpdateView.as_view(),
         name="newspaper-update"
     ),
     path(
-        "newspaper-delete/<int:pk>/",
+        "newspapers/<int:pk>/delete/",
         NewspapersDeleteView.as_view(),
         name="newspaper-delete"
     ),
