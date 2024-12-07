@@ -16,7 +16,11 @@ from agency.views import (
 
 urlpatterns = [
     path("", IndexView.as_view(), name="index"),
-    path("redactor-list/", RedactorListView.as_view(), name="redactor-list"),
+    path(
+        "redactor-list/",
+        RedactorListView.as_view(),
+        name="redactor-list"
+    ),
     path(
         "redactor-detail/<int:pk>/",
         RedactorDetailView.as_view(),
