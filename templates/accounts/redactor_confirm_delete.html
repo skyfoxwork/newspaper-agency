@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <br>
+  <br>
+  <br>
+
+  <div class="d-flex align-items-center p-3 my-3 text-white bg-secondary rounded shadow-sm">
+    <div class="lh-1">
+      <h1 class="h3 mb-0 text-white lh-1">
+        Delete redactor "{{ redactor.username }}" ?
+      </h1>
+    </div>
+  </div>
+  <form action="" method="post">
+    {% csrf_token %}
+
+    <div class="text-center">
+      <input type="submit" value="Yes" class="btn btn-danger">
+    </div>
+  </form>
+
+  <br>
+  <div class="text-center">
+    <a class="btn btn-success" role="button" href="{% url 'agency:redactor-list' %}">Cansel</a>
+  </div>
+  <br>
+{% endblock %}
