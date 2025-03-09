@@ -1,0 +1,314 @@
+[
+    {
+        "model": "agency.topic",
+        "pk": 1,
+        "fields": {
+            "name": "Technology"
+        }
+    },
+    {
+        "model": "agency.topic",
+        "pk": 2,
+        "fields": {
+            "name": "Science"
+        }
+    },
+    {
+        "model": "agency.topic",
+        "pk": 3,
+        "fields": {
+            "name": "Health"
+        }
+    },
+    {
+        "model": "agency.topic",
+        "pk": 4,
+        "fields": {
+            "name": "Politics"
+        }
+    },
+    {
+        "model": "agency.topic",
+        "pk": 5,
+        "fields": {
+            "name": "Sports"
+        }
+    },
+    {
+        "model": "agency.topic",
+        "pk": 6,
+        "fields": {
+            "name": "Economics"
+        }
+    },
+    {
+        "model": "agency.topic",
+        "pk": 7,
+        "fields": {
+            "name": "Environment"
+        }
+    },
+    {
+        "model": "agency.topic",
+        "pk": 8,
+        "fields": {
+            "name": "Education"
+        }
+    },
+    {
+        "model": "agency.topic",
+        "pk": 9,
+        "fields": {
+            "name": "History"
+        }
+    },
+    {
+        "model": "agency.topic",
+        "pk": 10,
+        "fields": {
+            "name": "Culture"
+        }
+    },
+    {
+        "model": "accounts.redactor",
+        "pk": 1,
+        "fields": {
+            "username": "john_doe",
+            "password": "pbkdf2_sha256$260000$SKRElM6w1mTL$wZzSFiM3H6Tp6jlP4ZOkS1xvZmFfglkH9zzjCzvXZkA=",
+            "first_name": "John",
+            "last_name": "Doe",
+            "email": "john.doe@example.com",
+            "years_of_experience": 5
+        }
+    },
+    {
+        "model": "accounts.redactor",
+        "pk": 2,
+        "fields": {
+            "username": "jane_smith",
+            "password": "pbkdf2_sha256$260000$SKRElM6w1mTL$wZzSFiM3H6Tp6jlP4ZOkS1xvZmFfglkH9zzjCzvXZkA=",
+            "first_name": "Jane",
+            "last_name": "Smith",
+            "email": "jane.smith@example.com",
+            "years_of_experience": 3
+        }
+    },
+    {
+        "model": "accounts.redactor",
+        "pk": 3,
+        "fields": {
+            "username": "alice_williams",
+            "password": "pbkdf2_sha256$260000$wN7y5Fd5c3kP$8hfSxwMjU0AkNNwr9lkUxi9FeHchvHEzjldnQOqY9XY=",
+            "first_name": "Alice",
+            "last_name": "Williams",
+            "email": "alice.williams@example.com",
+            "years_of_experience": 6
+        }
+    },
+    {
+        "model": "accounts.redactor",
+        "pk": 4,
+        "fields": {
+            "username": "bob_brown",
+            "password": "pbkdf2_sha256$260000$TzFzTk7hMQxA$XvlG7pJ8IqltbMjg0sHcYsQ8R6BRdh5VQNKpqgM37aw=",
+            "first_name": "Bob",
+            "last_name": "Brown",
+            "email": "bob.brown@example.com",
+            "years_of_experience": 8
+        }
+    },
+    {
+        "model": "accounts.redactor",
+        "pk": 5,
+        "fields": {
+            "username": "charlie_davis",
+            "password": "pbkdf2_sha256$260000$fbMf6iqMm5gp$e0pKse8Q9LSVkwIM2HFFd2yf4nNLYErzV5bI2ynIG7A=",
+            "first_name": "Charlie",
+            "last_name": "Davis",
+            "email": "charlie.davis@example.com",
+            "years_of_experience": 4
+        }
+    },
+    {
+        "model": "accounts.redactor",
+        "pk": 6,
+        "fields": {
+            "username": "david_miller",
+            "password": "pbkdf2_sha256$260000$zHf28QwfLz7g$7foGp3V6mFHyk1sFpsw4J0e16PtRHsXAfmlgS5BRh3c=",
+            "first_name": "David",
+            "last_name": "Miller",
+            "email": "david.miller@example.com",
+            "years_of_experience": 7
+        }
+    },
+    {
+        "model": "accounts.redactor",
+        "pk": 7,
+        "fields": {
+            "username": "emma_wilson",
+            "password": "pbkdf2_sha256$260000$jtFdzV6aeqD5$oyjptdQFELxFf5wJX3ZgyftN5D0xoWpfvvKv7KHxqls=",
+            "first_name": "Emma",
+            "last_name": "Wilson",
+            "email": "emma.wilson@example.com",
+            "years_of_experience": 2
+        }
+    },
+    {
+        "model": "accounts.redactor",
+        "pk": 8,
+        "fields": {
+            "username": "frank_moore",
+            "password": "pbkdf2_sha256$260000$KN9Fq9a6h6pM$9bmSfpm0oP9JYUw3Gq2mAXYkgSQGz24lBDgJ42g5cFE=",
+            "first_name": "Frank",
+            "last_name": "Moore",
+            "email": "frank.moore@example.com",
+            "years_of_experience": 10
+        }
+    },
+    {
+        "model": "accounts.redactor",
+        "pk": 9,
+        "fields": {
+            "username": "grace_jackson",
+            "password": "pbkdf2_sha256$260000$7m2R1Mn7mREb$DqFZ4FgkaoDBoVbx2LR2kXg71vxaYs8Jl6E4XsSszxg=",
+            "first_name": "Grace",
+            "last_name": "Jackson",
+            "email": "grace.jackson@example.com",
+            "years_of_experience": 1
+        }
+    },
+    {
+        "model": "accounts.redactor",
+        "pk": 10,
+        "fields": {
+            "username": "hannah_lee",
+            "password": "pbkdf2_sha256$260000$uVquZ8AsI3yE$dmj6wdtu9NFlHfjjH1dTeUGe6HFN0kMhkcoQ0Rh5MYO=",
+            "first_name": "Hannah",
+            "last_name": "Lee",
+            "email": "hannah.lee@example.com",
+            "years_of_experience": 9
+        }
+    },
+        {
+        "model": "accounts.redactor",
+        "pk": 10,
+        "fields": {
+            "username": "user.public",
+            "password": "pbkdf2_sha256$870000$4V3Gzlk2pr2aGlXbG5pT0P$ZjNI8w6whzLg5keKmKfIDmIg+8T1w1wMt4IOwRfY6Zo=",
+            "first_name": "user",
+            "last_name": "public",
+            "email": "user.public@example.com",
+            "years_of_experience": 15
+        }
+    },
+    {
+        "model": "agency.newspaper",
+        "pk": 1,
+        "fields": {
+            "title": "Tech Innovations 2024",
+            "context": "The world of technology continues to evolve rapidly in 2024, with major developments shaping industries like AI, robotics, and cybersecurity. As we enter the year, several cutting-edge breakthroughs are expected to redefine the landscape.",
+            "published_date": "2024-11-30",
+            "topic": 1,
+            "publishers": [1, 2, 3]
+        }
+    },
+    {
+        "model": "agency.newspaper",
+        "pk": 2,
+        "fields": {
+            "title": "Science Breakthroughs",
+            "context": "New discoveries in physics, including quantum mechanics and space-time phenomena, are revolutionizing our understanding of the universe. The research is expected to have far-reaching implications on technology and the future of space exploration.",
+            "published_date": "2024-11-29",
+            "topic": 2,
+            "publishers": [4, 5]
+        }
+    },
+    {
+        "model": "agency.newspaper",
+        "pk": 3,
+        "fields": {
+            "title": "Health Insights",
+            "context": "Recent medical research has shown significant improvements in treatments for cancer, including immunotherapy and targeted therapies. These developments are offering hope to millions of patients and are expected to change the landscape of oncology forever.",
+            "published_date": "2024-11-28",
+            "topic": 3,
+            "publishers": [6, 7]
+        }
+    },
+    {
+        "model": "agency.newspaper",
+        "pk": 4,
+        "fields": {
+            "title": "Political Landscape in 2024",
+            "context": "In the upcoming election, the political parties are focusing on economic reform, healthcare, and climate change. The discussions around these topics are expected to shape national policies for years to come, with the future of democracy at stake.",
+            "published_date": "2024-11-27",
+            "topic": 4,
+            "publishers": [8, 9]
+        }
+    },
+    {
+        "model": "agency.newspaper",
+        "pk": 5,
+        "fields": {
+            "title": "Olympic Games Preview",
+            "context": "This year's summer Olympics is expected to break new records in athletics, with athletes training harder than ever to push the boundaries of human performance. The international competition promises to showcase incredible feats of strength and skill across various sports.",
+            "published_date": "2024-11-26",
+            "topic": 5,
+            "publishers": [1, 2]
+        }
+    },
+    {
+        "model": "agency.newspaper",
+        "pk": 6,
+        "fields": {
+            "title": "Global Economic Trends",
+            "context": "Economists are predicting a slowdown in the global economy over the next few years due to geopolitical tensions, inflationary pressures, and shifts in global trade patterns. These factors are expected to lead to a period of uncertainty and market volatility.",
+            "published_date": "2024-11-25",
+            "topic": 6,
+            "publishers": [3, 4, 5]
+        }
+    },
+    {
+        "model": "agency.newspaper",
+        "pk": 7,
+        "fields": {
+            "title": "Climate Crisis Worsens",
+            "context": "The effects of climate change are becoming more apparent as extreme weather events increase, from wildfires to hurricanes. Governments and activists are calling for urgent action to mitigate the damage, focusing on green energy and carbon reduction strategies.",
+            "published_date": "2024-11-24",
+            "topic": 7,
+            "publishers": [6, 8]
+        }
+    },
+    {
+        "model": "agency.newspaper",
+        "pk": 8,
+        "fields": {
+            "title": "Education System Reforms",
+            "context": "Many countries are focusing on making their education systems more inclusive, with an emphasis on integrating technology and personalized learning. These reforms aim to better prepare students for the challenges of the 21st century and improve global competitiveness.",
+            "published_date": "2024-11-23",
+            "topic": 8,
+            "publishers": [7, 9]
+        }
+    },
+    {
+        "model": "agency.newspaper",
+        "pk": 9,
+        "fields": {
+            "title": "History of Artificial Intelligence",
+            "context": "AI has evolved rapidly from its inception in the 20th century, with major milestones including machine learning, neural networks, and natural language processing. As we look back on AI's history, we can see its transformative impact on society, business, and the arts.",
+            "published_date": "2024-11-22",
+            "topic": 9,
+            "publishers": [10, 1]
+        }
+    },
+    {
+        "model": "agency.newspaper",
+        "pk": 10,
+        "fields": {
+            "title": "Cultural Renaissance in Europe",
+            "context": "European culture is seeing a resurgence with new artists and movements in literature, music, and the visual arts. This renaissance is fueled by a growing interest in multiculturalism and the blending of traditional and modern creative expressions.",
+            "published_date": "2024-11-21",
+            "topic": 10,
+            "publishers": [2, 3]
+        }
+    }
+]

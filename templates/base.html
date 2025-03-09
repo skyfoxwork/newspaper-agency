@@ -1,0 +1,33 @@
+{% load django_bootstrap5 %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% block title %}
+      <title>Newspaper agency</title>
+    {% endblock %}
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900&amp;display=swap" rel="stylesheet">
+
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+  <body>
+    <div class="container-fluid bg-light">
+
+      {% block sidebar %}
+        {% include "includes/sidebar.html" %}
+      {% endblock %}
+
+      {% block content %}{% endblock %}
+
+    </div>
+  </body>
+
+</html>

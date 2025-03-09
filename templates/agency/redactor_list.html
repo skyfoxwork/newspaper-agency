@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <br>
+  <br>
+  <br>
+
+  <div class="d-flex align-items-center p-3 my-3 text-white bg-secondary rounded shadow-sm">
+    <div class="lh-1">
+      <h1 class="h6 mb-0 text-white lh-1">Redactors</h1>
+
+    </div>
+    <a class="ms-auto text-white text-decoration-none" href="{% url 'accounts:redactor-create' %}">Create</a>
+  </div>
+
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">User name</th>
+      <th scope="col">First name</th>
+      <th scope="col">Last name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Years of experience</th>
+      <th scope="col">About</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% if redactor_list %}
+    {% for redactor in redactor_list %}
+    <tr>
+      <th scope="row">{{ forloop.counter }}</th>
+      <td>{{ redactor.username }}</td>
+      <td>{{ redactor.first_name }}</td>
+      <td>{{ redactor.last_name }}</td>
+      <td>{{ redactor.email }}</td>
+      {% if redactor.years_of_experience %}
+        <td>{{ redactor.years_of_experience }}</td>
+      {% else %}
+        <td> - </td>
+      {% endif %}
+      <td>
+        <a class="text-decoration-none" href="{% url 'agency:redactor-detail' pk=redactor.id %}">ABOUT</a>
+      </td>
+    </tr>
+    {% endfor %}
+  {% else %}
+    <p>No redactors yes.</p>
+  {% endif %}
+  </tbody>
+</table>
+{% endblock %}

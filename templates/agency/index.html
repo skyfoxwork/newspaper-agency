@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br>
+<br>
+<br>
+
+<main class="container">
+  {% if user.is_authenticated %}
+    <h1>Newspaper agency</h1>
+    <br>
+    <h3>Hello "{{ user.username }}", Welcome!</h3>
+    <br>
+  {% else %}
+  <div class="bg-light p-5 rounded">
+    <h1>Newspaper agency</h1>
+    <h4>The best news agency in the world</h4>
+    <p class="lead">
+      Newspaper agency is app for managing newspapers and the redactors responsible for each newspaper issue.
+    </p>
+    <a class="btn btn-lg btn-primary" href="{% url 'accounts:login' %}" role="button">
+      login »
+    </a>
+  </div>
+  {% endif %}
+</main>
+
+{% endblock %}
